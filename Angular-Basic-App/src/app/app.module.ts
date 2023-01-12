@@ -8,11 +8,15 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgModule} from "@angular/core";
+import {HomeComponent} from "./modules/home/home.component";
+import {ProfileComponent} from "./modules/profile/profile.component";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
