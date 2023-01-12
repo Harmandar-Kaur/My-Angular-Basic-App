@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Observable, of, Subscription} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component( {
   selector: 'app-home',
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit, OnDestroy{
 
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
   }
 
@@ -79,6 +81,11 @@ export class HomeComponent implements OnInit, OnDestroy{
     //this.formGroup?.valueChanges.subscribe((val) => {
     //console.log(val);
     //)
+  }
+
+  goToProfileAndLogCabbage() : void {
+    console.log('Cabbage');
+    this.router.navigate(['/profile']);
   }
 
   ngOnDestroy() : void {
